@@ -1,21 +1,48 @@
-public class Nodo {
+package Backend;
+
+public class Contacto {
+    private String nombre;
     private String username;
     private String password;
     private String telefono1;
     private String telefono2;
     private String Email;
     private String direccion;
+    private String bornDate;
     private String grupos;
-    
-    public Nodo(String username, String password, String telefono1, String telefono2, String email, String direccion,
-            String grupos) {
+
+    public Contacto(String nombre, String username, String password, String telefono1, String telefono2, String email,
+            String direccion, String bornDate, String grupos) {
+        this.nombre = nombre;
         this.username = username;
         this.password = password;
         this.telefono1 = telefono1;
         this.telefono2 = telefono2;
         Email = email;
         this.direccion = direccion;
+        this.bornDate = bornDate;
         this.grupos = grupos;
+    }
+
+    public String toString() {
+        return "Contacto{" +
+                "nombre='" + nombre + '\'' +
+                ", usuario='" + username + '\'' +
+                ", telefono1='" + telefono1 + '\'' +
+                ", telefono2='" + telefono2 + '\'' +
+                ", correo='" + Email + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", fechaNacimiento='" + bornDate + '\'' +
+                ", grupos=" + grupos +
+                '}';
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;   
     }
 
     public String getUsername() {
@@ -64,6 +91,14 @@ public class Nodo {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public String getBornDate() {
+        return bornDate;
+    }
+
+    public void setBornDate(String bornDate) {
+        this.bornDate = bornDate;
     }
 
     public String getGrupos() {

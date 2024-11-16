@@ -5,7 +5,9 @@ public class Nodo {
     private Object dato;
     private Nodo liga;
     
-    public Nodo() {
+    public Nodo(int tag, Object dato) {
+        this.tag = tag;
+        this.dato = dato;
         liga = null;
     }
 

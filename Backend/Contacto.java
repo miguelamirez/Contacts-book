@@ -9,10 +9,11 @@ public class Contacto {
     private String Email;
     private String direccion;
     private String bornDate;
+    private String categoria;
     private String grupos;
 
     public Contacto(String nombre, String username, String password, String telefono1, String telefono2, String email,
-            String direccion, String bornDate, String grupos) {
+            String direccion, String bornDate, String categoria, String grupos) {
         this.nombre = nombre;
         this.username = username;
         this.password = password;
@@ -21,20 +22,22 @@ public class Contacto {
         Email = email;
         this.direccion = direccion;
         this.bornDate = bornDate;
+        this.categoria = categoria;
         this.grupos = grupos;
     }
 
     public String toString() {
-        return "Contacto{" +
-                "nombre='" + nombre + '\'' +
-                ", usuario='" + username + '\'' +
-                ", telefono1='" + telefono1 + '\'' +
-                ", telefono2='" + telefono2 + '\'' +
-                ", correo='" + Email + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", fechaNacimiento='" + bornDate + '\'' +
-                ", grupos=" + grupos +
-                '}';
+        return "Contacto { " +
+                "nombre = '" + nombre + '\'' +
+                ", usuario = '" + username + '\'' +
+                ", telefono1 = '" + telefono1 + '\'' +
+                ", telefono2 = '" + telefono2 + '\'' +
+                ", correo = '" + Email + '\'' +
+                ", direccion = '" + direccion + '\'' +
+                ", fechaNacimiento = '" + bornDate + '\'' +
+                ", categoria = '" + categoria + '\'' +
+                ", grupos = '" + grupos + '\'' +
+                " }\n";
     }
 
     public String getNombre() {
@@ -101,12 +104,20 @@ public class Contacto {
         this.bornDate = bornDate;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String grupos) {
+        this.categoria = grupos;
+    }
+
     public String getGrupos() {
         return grupos;
     }
 
-    public void setGrupos(String grupos) {
-        this.grupos = grupos;
+    public void setGrupos(String subGrupos) {
+        this.grupos = subGrupos;
     }
 
 }
